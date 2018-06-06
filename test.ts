@@ -100,7 +100,7 @@ let time = new Date();
 
  
 
-this.month  = time.getMonth()+1;        // get month 0-11 , month off by one 
+this.month  = time.getMonth()+1;        // get month 0-11 , month off by one    
 this.day= time.getDate();             //get day  1 - 31
 this.years = time.getFullYear();     //get year  yyyy
 this.hours = time.getHours()-12;        // get hours 0-24
