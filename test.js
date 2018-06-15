@@ -214,14 +214,14 @@
  
  //label.active input
  
-let approvedDenied = $('#approveDenied label.active input').val();
+// let approvedDenied = $('#approveDenied label.active input').val();
 //console.log(approvedDenied);
 
-$(document).on('change', ('#approveDenied label.active input', function(){
+// $(document).on('change', ('#approveDenied label.active input', function(){
     //console.log('clicked');
    
-    $('#answer').append =`<span>${approvedDenied}</span>`;
-  }));
+  //   $('#answer').append =`<span>${approvedDenied}</span>`;
+  // }));
  
 // let answer = document.getElementById('answer');
 
@@ -233,3 +233,23 @@ $(document).on('change', ('#approveDenied label.active input', function(){
  
  
  
+// $('.header').click(function(){
+
+//   $(this).nextUntil('tr.header').slideToggle(1000);
+//   });
+
+// $('.header').click(function(){
+//   $(this).find('span').text(function(_, value){return value=='-'?'+':'-'});
+//    $(this).nextUntil('tr.header').slideToggle(100, function(){
+//    });
+// });
+
+// $('.header').click(function(){
+//   $(this).toggleClass('expand').nextUntil('tr.header').slideToggle(100);
+// });
+
+$('tr.header').click(function(){
+  $(this).nextUntil('tr.header').css('display', function(i,v){
+      return this.style.display === 'table-row' ? 'none' : 'table-row';
+  });
+});
